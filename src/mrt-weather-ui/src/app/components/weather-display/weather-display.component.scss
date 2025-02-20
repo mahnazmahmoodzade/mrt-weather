@@ -1,0 +1,43 @@
+// weather-display.component.scss
+.weather-card {
+  margin: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 280px; 
+  min-height: 200px;
+  background-color: #a3b7cf6f;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .weather-icon {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  .temperature {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #2196F3; // Azure blue
+    text-align: center;
+    margin: 16px 0;
+  }
+
+  .time-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #757575; // Gray for subtlety
+    margin-top: 16px;
+
+    mat-icon {
+      color: #FFC107; // Amber for sunrise/sunset icon
+    }
+  }
+}

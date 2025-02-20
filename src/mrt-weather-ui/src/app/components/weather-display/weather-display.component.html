@@ -1,0 +1,21 @@
+
+<mat-card class="weather-card">
+  <mat-card-header>
+    <mat-card-title>{{ weather().cityName }}</mat-card-title>
+    <mat-card-subtitle>
+      <img [src]="getIconUrl(weather().icon)" alt="Weather icon" class="weather-icon">
+      {{ weather().description | titlecase }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p class="temperature">{{ weather().temperature }}°{{ unit() }}</p>
+
+    <div class="time-display">
+      <mat-icon>{{ showSunrise() ? 'wb_sunny' : 'nights_stay' }}</mat-icon>
+      <span>
+        {{ (showSunrise() ? weather().sunrise : weather().sunset) * 1000 | date:'shortTime' }}
+      </span>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,9 @@
+// Apply Material typography
+@use '@angular/material' as mat;
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+

@@ -1,0 +1,20 @@
+<div class="weather-container">
+  <header>
+    <app-unit-toggle />
+    <app-sunrise-sunset-toggle 
+    [showSunrise]="showSunrise"
+    (toggle)="toggleSunriseSunset()" />
+  </header>
+
+  <div class="weather-grid">
+    @for (weather of weatherService.weatherData(); track weather.cityName) {
+      <app-weather-display 
+        [weather]="weather"
+        [unit]="unitService.currentUnit() === 0 ? 'C' : 'F'"
+        [showSunrise]="showSunrise"
+      />
+    } @empty {
+      <p class="loading">Loading weather data...</p>
+    }
+  </div>
+</div>

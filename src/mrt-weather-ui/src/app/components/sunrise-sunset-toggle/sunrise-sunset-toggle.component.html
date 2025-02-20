@@ -1,0 +1,10 @@
+<button 
+  mat-raised-button
+  color="accent"
+  (click)="onToggle()" 
+  class="time-toggle"
+  [attr.aria-label]="'Toggle sunrise/sunset display'"
+>
+  <mat-icon>{{ showSunrise ? 'wb_sunny' : 'nights_stay' }}</mat-icon>
+  <span>{{ showSunrise ? 'Show Sunset' : 'Show Sunrise' }}</span>
+</button>

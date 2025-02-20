@@ -1,0 +1,19 @@
+<mat-button-toggle-group 
+  [value]="currentUnit()"
+  (change)="toggleUnit($event.value)"
+  aria-label="Temperature unit selector"
+  class="unit-toggle-group"
+>
+  <mat-button-toggle 
+    [value]="TemperatureUnit.Metric"
+    aria-label="Celsius"
+  >
+    °C
+  </mat-button-toggle>
+  <mat-button-toggle 
+    [value]="TemperatureUnit.Imperial"
+    aria-label="Fahrenheit"
+  >
+    °F
+  </mat-button-toggle>
+</mat-button-toggle-group>
